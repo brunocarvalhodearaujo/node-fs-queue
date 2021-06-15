@@ -1,6 +1,6 @@
 {
   "name": "node-fs-queue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "repository": "https://github.com/brunocarvalhodearaujo/nodejs-fs-queue.git",
   "author": "Bruno Carvalho de Araujo <brunocarvalhodearaujo@gmail.com>",
