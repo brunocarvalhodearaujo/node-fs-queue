@@ -1,0 +1,53 @@
+{
+  "name": "node-fs-queue",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "https://github.com/brunocarvalhodearaujo/nodejs-fs-queue.git",
+  "author": "Bruno Carvalho de Araujo <brunocarvalhodearaujo@gmail.com>",
+  "license": "proprietary",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublish": "npm run build",
+    "test": "jest --runInBand --no-cache --forceExit --coverage",
+    "build": "rm -rf dist/* -f && tsc"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "9.0.11",
+    "@types/jest": "26.0.23",
+    "@types/node": "15.12.2",
+    "jest": "27.0.4",
+    "ts-jest": "27.0.3",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "fs-extra": "10.0.0"
+  },
+  "jest": {
+    "verbose": true,
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "coverageReporters": [
+      "text-summary",
+      "lcov"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,js}",
+      "!src/**/index.{ts,js}",
+      "!src/**/*.{test,spec}.{ts,js}"
+    ],
+    "testRegex": "(test|src|__test__)/.*\\.(spec|test)\\.(js|ts)$",
+    "coverageThreshold": {
+      "global": {
+        "statements": 75,
+        "branches": 75,
+        "functions": 75,
+        "lines": 75
+      }
+    }
+  }
+}
